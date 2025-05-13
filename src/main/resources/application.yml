@@ -1,0 +1,42 @@
+#logging:
+#  level:
+#    root: info
+
+server:
+  servlet:
+    context-path: /file-management-service-api
+
+#  ssl:
+#    key-store: keystore.p12
+#    key-store-password: tnf_npl
+#    key-store-type: PKCS12
+#    key-alias: your_alias
+spring:
+  #  mail:
+  #    host: us2.smtp.mailhostbox.com
+  #    port: 587
+  #    username: alert@nplindia.tech
+  #    password: admin123
+  #    properties:
+  #      mail:
+  #        smtp:
+  #          auth: true
+  #          starttls:
+  #            enable: true
+  profiles:
+    active: dev
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+  data:
+    web:
+      pageable:
+        default-page-size=10:
+        max-page-size=50:

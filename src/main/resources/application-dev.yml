@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    show-sql: false
+  datasource:
+    url: jdbc:postgresql://192.168.1.200:5432/file-management-service-api-dev-1-0-0
+    username: postgres
+    password: postgres
+server:
+  port: 9090
